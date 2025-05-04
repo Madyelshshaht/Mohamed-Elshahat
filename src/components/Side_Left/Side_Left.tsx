@@ -4,7 +4,10 @@ import Contact from "../Contact/Contact";
 
 
 
-import mady from '../../assets/mady.jpg';
+// import mady from '../../assets/mady.jpg';
+import ma1 from '../../assets/ma1.jpg';
+import m2 from "../../assets/m2.png";
+
 
 import {
     CalendarDays,
@@ -22,7 +25,7 @@ import { GitHub, LinkedIn } from "@mui/icons-material";
 
 const Side_Left = ({ toggleSidebar, sidebarOpen }) => {
     const handleOpenImg = () => {
-        window.open(mady, "_blank");
+        window.open(ma1, "_blank");
     };
 
     return (
@@ -33,10 +36,6 @@ const Side_Left = ({ toggleSidebar, sidebarOpen }) => {
                     : "-translate-x-full ease-in"
                 }`}
         >
-            {/* <video autoPlay loop muted playsInline className="video-bg" onError={(e) => console.error("Video failed to load", e)}>
-                <source src="https://videos.pexels.com/video-files/2611250/2611250-uhd_2560_1440_30fps.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video> */}
             <video
                 autoPlay
                 loop
@@ -65,9 +64,9 @@ const Side_Left = ({ toggleSidebar, sidebarOpen }) => {
                     <div className="Header pt-2 text-white">
                         <div className="Myphoto">
                             <img
-                                src={mady}
+                                src={m2}
                                 alt="Mady"
-                                className="rounded-xl block mx-auto cursor-pointer w-48 h-45 md:w-48 md:h-45 object-fill"
+                                className="rounded-xl block mx-auto cursor-pointer w-48 h-45 md:w-48 md:h-45 object-cover"
                                 onClick={handleOpenImg}
                             />
                         </div>

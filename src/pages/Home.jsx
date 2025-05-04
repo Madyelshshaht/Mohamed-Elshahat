@@ -56,14 +56,14 @@ const Home = () => {
                     >
                         <div className="p-4 rounded mt-2 opacity-80 hover:opacity-100 ">
                             <p className="md:text-xl text-md ">
-                                Frontend Developer | <span className="font-semibold md:text-xl text-sm">React & Vue</span> | Passionate About Building Interactive Experiences with
-                                <span className="font-semibold md:text-xl text-sm"> 2 years of experience</span> crafting sleek, responsive, and engaging user interfaces. I thrive on turning designs into dynamic,
+                                Frontend Developer | <span className="font-semibold md:text-xl text-sm">React & Next</span> | Passionate About Building Interactive Experiences with
+                                <span className="font-semibold md:text-xl text-sm"> +2 years of experience</span> crafting sleek, responsive, and engaging user interfaces. I thrive on turning designs into dynamic,
                                 high-performance web applications <span className="font-semibold md:text-xl text-sm">using React, Vue.js, HTML, CSS, JavaScript, and TypeScript</span>, ensuring users have seamless and visually stunning experiences.
                             </p>
                             <br />
                             <p className="md:text-xl text-md font-semibold">Tech Stack & Skills:</p>
                             <ul className="list-disc list-inside space-y-1 ">
-                                <li className="md:text-xl text-sm"><span className="font-semibold ">Frontend:</span> React.js, Vue.js, JavaScript (ES6+), TypeScript</li>
+                                <li className="md:text-xl text-sm"><span className="font-semibold ">Frontend:</span> React.js, Next.js, JavaScript (ES6+), TypeScript</li>
                                 <li className="md:text-xl text-sm"><span className="font-semibold ">UI & Styling:</span> Tailwind CSS, Sass, Bootstrap, Material UI</li>
                                 <li className="md:text-xl text-sm"><span className="font-semibold ">State Management:</span> Redux, Tanstack</li>
                                 <li className="md:text-xl text-sm"><span className="font-semibold ">Tools & Workflow:</span> Git, Vite, Figma</li>
