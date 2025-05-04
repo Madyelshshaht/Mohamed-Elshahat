@@ -22,7 +22,8 @@ const AddProject = ({ editMode = false, projectData = {} }) => {
     const [deployLink, setDeployLink] = useState("");
     const [githubLink, setGithubLink] = useState("");
     const [images, setImages] = useState([]);
-    const [imagePreview, setImagePreview] = useState(""); // For image preview
+    // const [imagePreview, setImagePreview] = useState("");
+    const [imagePreview, setImagePreview] = useState([]);
 
     const [canEditImage, setCanEditImage] = useState(false);
 
@@ -136,11 +137,23 @@ const AddProject = ({ editMode = false, projectData = {} }) => {
         const files = Array.from(event.target.files);
         if (files.length > 0) {
             setImages(files);
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                setImagePreview(e.target.result); // Set the image preview
-            };
-            reader.readAsDataURL(files[0]); // Read the file as a Data URL
+            // const reader = new FileReader();
+            // reader.onload = function (e) {
+            //     setImagePreview(e.target.result); 
+            // };
+            // reader.readAsDataURL(files[0]); 
+
+
+            // توليد preview لكل الصور
+            const previews = files.map(file => {
+                return new Promise((resolve) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => resolve(e.target.result);
+                    reader.readAsDataURL(file);
+                });
+            });
+
+            Promise.all(previews).then(setImagePreview);
         }
     };
 
@@ -241,9 +254,14 @@ const AddProject = ({ editMode = false, projectData = {} }) => {
                     }
                 </div>
 
-                {imagePreview && !canEditImage && (
+                {/* {imagePreview && !canEditImage && (
                     <img src={imagePreview} alt="Current preview" className="object-cover w-[260px] h-[170px] rounded my-2" />
-                )}
+                )} */}
+                <div className="flex gap-2">
+                    {imagePreview && imagePreview.map((src, i) => (
+                        <img key={i} src={src} alt={`preview-${i}`} className="w-32 h-32 object-cover rounded-md" />
+                    ))}
+                </div>
 
 
                 <input
