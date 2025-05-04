@@ -1,0 +1,1 @@
+import{j as e}from"./index-CX3akNh_.js";const r=({title:s})=>e.jsxs("div",{className:"pb-7",children:[e.jsx("h1",{className:"text-4xl font-bold mb-2  ",children:s}),e.jsx("div",{className:"w-10 h-1 outline-0 border-none bg-green-400 rounded-3xl"})]});export{r as H};
