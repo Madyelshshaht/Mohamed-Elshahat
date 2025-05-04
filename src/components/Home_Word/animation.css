@@ -1,0 +1,51 @@
+.name,
+.name1,
+.name2,
+.name3 {
+    font-weight: bold !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase;
+}
+
+.name {
+    
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(132, 100%, 31%) 10%, hsl(0, 0%, 30%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s 1s infinite linear;
+}
+
+.name1 {
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(132, 96%, 39%) 10%, hsl(0, 0%, 30%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 8s 5s infinite linear;
+}
+
+.name2 {
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(132, 100%, 34%) 10%, hsl(0, 0%, 30%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 10s 10s infinite linear;
+}
+
+.name3 {
+    background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(132, 100%, 34%) 10%, hsl(0, 0%, 30%) 20%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 15s 15s infinite linear;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 600px;
+    }
+
+    100% {
+        background-position: 600px;
+    }
+}

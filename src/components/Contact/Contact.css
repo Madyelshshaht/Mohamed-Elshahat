@@ -1,0 +1,19 @@
+.info-Link:hover{
+    color: #00e650;
+    transition-duration: 0.8s;
+
+}
+.contact-info:hover .Icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #00e650;
+    transition-duration: 1.6s;
+}
+.contact-info:hover p{
+    font-weight: bold;
+    color: white;
+    font-style: italic;
+    letter-spacing: 5px;
+    transition-duration: 0.8s;
+}

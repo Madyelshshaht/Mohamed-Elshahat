@@ -1,0 +1,24 @@
+.project {
+    height: fit-content;
+    overflow: hidden;
+}
+
+.project .desc {
+    word-break: break-all;
+    min-height: fit-content;
+}
+
+.project img{
+    height: 280px;
+    max-height: 330px;
+    width: 100%;
+    object-fit:cover;
+
+    
+}
+.project img:hover{
+    transform: scale(1.1);
+    transition: 1s ease-in-out;
+}
+
+
