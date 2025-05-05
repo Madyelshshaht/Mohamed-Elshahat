@@ -124,9 +124,11 @@ const AddProject = ({ editMode = false, projectData = {} }) => {
 
             // Ensure projectData.images is an array and has a valid image URL
             if (projectData.images && projectData.images.length > 0) {
-                setImagePreview(projectData.images[0].url); // Assuming projectData.images[0] is a URL
+                // setImagePreview([projectData.images[0].url]); 
+                // Assuming projectData.images[0] is a URL
+                setImagePreview(projectData.images.map(img => img.url));
             } else {
-                setImagePreview(""); // No image available
+                setImagePreview([]); // No image available
             }
 
         }
@@ -208,16 +210,16 @@ const AddProject = ({ editMode = false, projectData = {} }) => {
                         />
 
                         <button
-                            class="rounded-md relative w-34 h-10 cursor-pointer flex items-center border border-green-600 bg-green-600 group hover:bg-green-600 active:bg-green-600 active:border-green-600 overflow-hidden"
+                            className="rounded-md relative w-34 h-10 cursor-pointer flex items-center border border-green-600 bg-green-600 group hover:bg-green-600 active:bg-green-600 active:border-green-600 overflow-hidden"
                             type='button'
                             onClick={handleAddSkill}
                         >
                             <span
-                                class="text-gray-200 font-semibold md:ml-6 ml-4 md:text-[15px] text-sm transform group-hover:translate-x-20 transition-all duration-300"
+                                className="text-gray-200 font-semibold md:ml-6 ml-4 md:text-[15px] text-sm transform group-hover:translate-x-20 transition-all duration-300"
                             >Add Skill
                             </span>
                             <span
-                                class="absolute right-0 h-full w-10 rounded-md bg-green-600 flex items-center justify-center transform group-hover:translate-x-0 group-hover:w-full transition-all duration-300"
+                                className="absolute right-0 h-full w-10 rounded-md bg-green-600 flex items-center justify-center transform group-hover:translate-x-0 group-hover:w-full transition-all duration-300"
                             >
                                 <RiAddCircleLine size={20} />
                             </span>
@@ -246,8 +248,8 @@ const AddProject = ({ editMode = false, projectData = {} }) => {
                         <button
                             type="button"
                             onClick={() => setCanEditImage(!canEditImage)}
-                            className="p-2  bg-blue-500 text-white rounded  cursor-pointer"
-                            class="md:w-[13%] w-[40%] p-2 text-white bg-blue-700 hover:text-blue-700 hover:bg-transparent hover:font-semibold flex gap-1 justify-center items-center cursor-pointer border border-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:text-white dark:border-blue-500 dark:hover:bg-transparent dark:hover:text-blue-500 dark:focus:ring-blue-900"
+                            // className="p-2  bg-blue-500 text-white rounded  cursor-pointer"
+                            className="md:w-[13%] w-[40%] p-2 text-white bg-blue-700 hover:text-blue-700 hover:bg-transparent hover:font-semibold flex gap-1 justify-center items-center cursor-pointer border border-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:text-white dark:border-blue-500 dark:hover:bg-transparent dark:hover:text-blue-500 dark:focus:ring-blue-900"
                         >
                             {!canEditImage ? "Edit Image" : "Cancel"}
                         </button>
@@ -258,7 +260,7 @@ const AddProject = ({ editMode = false, projectData = {} }) => {
                     <img src={imagePreview} alt="Current preview" className="object-cover w-[260px] h-[170px] rounded my-2" />
                 )} */}
                 <div className="flex gap-2">
-                    {imagePreview && imagePreview.map((src, i) => (
+                    {imagePreview && imagePreview?.map((src, i) => (
                         <img key={i} src={src} alt={`preview-${i}`} className="w-32 h-32 object-cover rounded-md" />
                     ))}
                 </div>
@@ -285,21 +287,22 @@ const AddProject = ({ editMode = false, projectData = {} }) => {
                 {editMode
                     ? <div className='flex gap-3'>
                         <button type="submit"
-                            class="text-white bg-blue-700 hover:text-blue-700 hover:bg-transparent hover:font-semibold flex gap-1 items-center cursor-pointer border border-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:text-white dark:border-blue-500 dark:hover:bg-transparent dark:hover:text-blue-500 dark:focus:ring-blue-900"
+                            className="text-white bg-blue-700 hover:text-blue-700 hover:bg-transparent hover:font-semibold flex gap-1 items-center cursor-pointer border border-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center dark:bg-blue-600 dark:text-white dark:border-blue-500 dark:hover:bg-transparent dark:hover:text-blue-500 dark:focus:ring-blue-900"
 
                         >
                             Edit <FaEdit size={20} />
                         </button>
                         <button
                             type="button"
-                            className=' bg-gray-600 p-2 px-5 font-bold  rounded-sm cursor-pointer '
+                            // className=' bg-gray-600 p-2 px-5 font-bold  rounded-sm cursor-pointer '
+                            className="justify-center p-2 gap-2 text-red-700 hover:text-white hover:font-semibold flex items-center cursor-pointer border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center  dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
                             onClick={() => navigate("/project")}
                         >
                             Cancel
                         </button>
                     </div> : <button type="submit"
                         // className=' bg-green-600 p-2 rounded-sm flex cursor-pointer justify-center items-center gap-2'
-                        class="justify-center p-2 gap-2 text-green-700 hover:text-white hover:font-semibold flex items-center cursor-pointer border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center  dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-900"
+                        className="justify-center p-2 gap-2 text-green-700 hover:text-white hover:font-semibold flex items-center cursor-pointer border border-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-3 py-2 text-center  dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-900"
                     >
                         Add Project <span className='mt-[-3px]'><BsDatabaseFillAdd size={20} /></span>
                     </button>

@@ -55,7 +55,7 @@ const Navabr = () => {
                         <li><Link to="login" className="hover:text-gray-400">Login</Link></li>
                     </ul>
                     {token &&
-                        <button onClick={handleLogout} class="text-red-700 hover:text-white  flex items-center cursor-pointer border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center  dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
+                        <button onClick={handleLogout} className="text-red-700 hover:text-white  flex items-center cursor-pointer border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center  dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900">
                             logOut
                         </button>
                     }

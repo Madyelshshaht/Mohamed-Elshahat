@@ -15,7 +15,7 @@ const EditProject = () => {
             });
     }, [id]);
 
-    return project ? <AddProject editMode={true} projectData={project} /> : <div> Loading... </div>;
+    return project ? <AddProject editMode={true} projectData={project} /> : <div> Edit Loading... </div>;
 };
 
 export default EditProject;

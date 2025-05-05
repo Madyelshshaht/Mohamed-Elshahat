@@ -194,14 +194,14 @@ const Project = () => {
                             {token && <div className="links  p-2 flex items-center gap-2 ">
                                 <button
                                     onClick={() => handleDeleteClick(pro._id)}
-                                    class="text-red-700 hover:text-white hover:font-semibold flex items-center cursor-pointer border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center  dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
+                                    className="text-red-700 hover:text-white hover:font-semibold flex items-center cursor-pointer border border-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm px-3 py-2 text-center  dark:border-red-500 dark:text-red-500 dark:hover:text-white dark:hover:bg-red-600 dark:focus:ring-red-900"
                                 >
                                     Delete <span><MdDelete size={20} /></span>
                                 </button>
 
                                 <Link to={`/edit/${pro._id}`}>
                                     <button
-                                        class="text-blue-700 hover:text-white hover:font-semibold flex gap-1 items-center cursor-pointer border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center  dark:border-blue-500 dark:text-blue-500  dark:hover:bg-blue-600 dark:focus:ring-blue-900"
+                                        className="text-blue-700 hover:text-white hover:font-semibold flex gap-1 items-center cursor-pointer border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center  dark:border-blue-500 dark:text-blue-500  dark:hover:bg-blue-600 dark:focus:ring-blue-900"
                                     >
                                         Edit <span className='mb-[2px]'><FaEdit size={19}  /></span>
                                     </button>
