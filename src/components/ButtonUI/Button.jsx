@@ -1,6 +1,6 @@
 import React from "react";
 // import styled from "styled-components";
-import cv from "/mohamed c cv .pdf"
+import cv from "/Mahamed_Elshshat-cv.pdf"
 import { motion } from "framer-motion"
 import { BookUser } from "lucide-react";
 

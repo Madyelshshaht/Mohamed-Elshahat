@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Lottie from "lottie-react";
 import admin from "../assets/loti/admin.json";
-import web from "../assets/loti/web.json";
+// import web from "../assets/loti/web.json";
 
 
 const Admin = () => {

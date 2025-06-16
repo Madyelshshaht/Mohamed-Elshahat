@@ -55,7 +55,7 @@ const Project = () => {
 
             if (data.success) {
                 setProjects(data.projects);
-            } else {
+            } else {                                   
                 toast.error("API response error:", data.message || "Unknown error");
             }
         } catch (err) {

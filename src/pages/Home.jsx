@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from "../animation";
 
 import web1 from "../assets/loti/web1.json";
+import AnimationNAme from "../components/Home_Word/AnimationNAme";
 
 // const MemoizedLottie = React.memo(({ animationData }) => (
 //     <Lottie animationData={animationData} loop={true} className="w-full sm:w-full md:w-95 lg:w-full me-12" />
@@ -31,6 +32,7 @@ const Home = () => {
                     <div className="content  text-center lg:text-left">
                         <div className="info md:p-5 p-2 flex flex-col gap-3 ">
                             <Animation_Word />
+                            {/* <AnimationNAme /> */}
                         </div>
                     </div>
 
