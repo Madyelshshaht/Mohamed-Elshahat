@@ -1,1 +1,0 @@
-import{j as t}from"./index-CVuuSpUh.js";const r=()=>t.jsxs("div",{className:"text-center mt-20  md:mt-40",children:[t.jsx("h1",{className:"text-xl md:text-5xl font-bold pb-3",children:"404 Error"}),t.jsx("h1",{className:"text-xl md:text-3xl font-bold",children:"Page Not Found"})]});export{r as default};
